@@ -28,7 +28,7 @@ class Button {
     strokeWeight(5);
     rect(x, y, w, h, 30);
     fill(black);
-    textSize(50);
+    textSize((h+w)/7);
     text(text, x, y);
     
     if (mouseX > x-w/2 && mouseX < x+w/2 && mouseY > y-h/2 && mouseY < y+h/2) {

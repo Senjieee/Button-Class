@@ -3,6 +3,8 @@
 //Oct 20 2022
 //Button Class
 
+PFont WashYourHand;
+
 color red = color(255, 0, 0);
 color blue = color(24, 0, 255);
 color yellow = color(255, 247, 0);
@@ -26,6 +28,8 @@ PImage buttonpic;
 
 void setup() {
   size(800, 800);
+  WashYourHand = createFont("WashYourHand.ttf", 200);
+  textFont(WashYourHand);
   background = white;
   Buttons = new Button[4];
   Buttons[0] = new Button("RED", 200, 200, 200, 150, red, glow);
