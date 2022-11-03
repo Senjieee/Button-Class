@@ -32,10 +32,10 @@ void setup() {
   textFont(WashYourHand);
   background = white;
   Buttons = new Button[4];
-  Buttons[0] = new Button("RED", 200, 200, 200, 150, red, glow);
-  Buttons[1] = new Button("BLUE", 200, 400, 200, 150, blue, glow);
-  Buttons[2] = new Button("YELLOW", 400, 650, 600, 200, yellow, glow);
-  Buttons[3] = new Button("GREEN", 550, 300, 400, 350, green, glow);
+  Buttons[0] = new Button("RED", 200, 200, 200, 150, red, blue);
+  Buttons[1] = new Button("BLUE", 200, 400, 200, 150, blue, yellow);
+  Buttons[2] = new Button("YELLOW", 400, 650, 600, 200, yellow, purple);
+  Buttons[3] = new Button("GREEN", 550, 300, 400, 350, green, red);
 }
 
 void draw() {
