@@ -22,6 +22,16 @@ class Button {
     clicked = false; 
   }
   
+  Button(int _x, int _y, int _w, int _h, color norm, color high) {
+    x = _x;
+    y = _y;
+    w= _w;
+    h = _h;
+    highlight = high;
+    normal = norm;
+    clicked = false;
+  }
+  
   void show() {
     drawRect();
     drawLabel();
