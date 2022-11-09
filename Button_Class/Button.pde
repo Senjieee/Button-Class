@@ -11,6 +11,8 @@ class Button {
   boolean clicked;
   color highlight, normal;
   String text;
+  PImage img;
+  
   Button(String t, int _x, int _y, int _w, int _h, color norm, color high) {
     x = _x;
     y = _y;
@@ -44,10 +46,11 @@ class Button {
     textAlign(CENTER, CENTER);
     if (touchingMouse()) {
       fill(highlight);
+      stroke(tactile);
     } else {
       fill(normal);
+      stroke(black);
     }
-    stroke(0);
     strokeWeight(5);
     rect(x, y, w, h, 30);
   }
