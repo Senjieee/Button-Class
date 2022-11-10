@@ -24,7 +24,7 @@ class Button {
     clicked = false; 
   }
   
-  Button(int _x, int _y, int _w, int _h, color norm, color high) {
+  Button(PImage pic,int _x, int _y, int _w, int _h, color norm, color high) {
     x = _x;
     y = _y;
     w= _w;
@@ -32,6 +32,7 @@ class Button {
     highlight = high;
     normal = norm;
     clicked = false;
+    img = pic;
   }
   
   void show() {
@@ -44,6 +45,7 @@ class Button {
     rectMode(CENTER);
     imageMode(CENTER);
     textAlign(CENTER, CENTER);
+    
     if (touchingMouse()) {
       fill(highlight);
       stroke(tactile);
@@ -61,8 +63,12 @@ class Button {
     } else {
       fill(highlight);
     }
-    textSize((h+w)/7);
-    text(text, x, y);
+    if (img == null) {
+      textSize((h+w)/7);
+      text(text, x, y);
+    } else {
+      image(img, x, y, w, h);
+    }
   }
   
   void checkForClick() {

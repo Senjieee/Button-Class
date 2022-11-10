@@ -28,6 +28,9 @@ PImage buttonpic;
 
 void setup() {
   size(800, 800);
+  
+  buttonpic = loadImage("picture.jpg");
+  
   WashYourHand = createFont("WashYourHand.ttf", 200);
   textFont(WashYourHand);
   background = white;
@@ -35,7 +38,7 @@ void setup() {
   Buttons[0] = new Button("RED", 200, 200, 200, 150, red, blue);
   Buttons[1] = new Button("BLUE", 200, 400, 200, 150, blue, yellow);
   Buttons[2] = new Button("YELLOW", 400, 650, 600, 200, yellow, purple);
-  Buttons[3] = new Button("GREEN", 550, 300, 400, 350, green, red);
+  Buttons[3] = new Button(buttonpic, 550, 300, 400, 350, green, red);
 }
 
 void draw() {
